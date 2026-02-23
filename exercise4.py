@@ -245,3 +245,6 @@ integer. '''
 #         print(f"square root of {num} = {sqrt_num}")
 # num = int(input("enter a non-negative number to find square root :"))
 # round_square_root(num)
+
+''' Note: Students are expected to write clean, well-documented Python code and test each function
+with multiple inputs. '''
