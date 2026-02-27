@@ -14,25 +14,48 @@ The grades are assigned as follows:
 • Grade 5: None of the conditions are satisfied
 Write a program that takes as input the hardness, carbon content, and tensile strength of
 the steel and prints the grade of the steel. '''
-# hardness = float(input("Enter hardness: "))
-# carbon = float(input("Enter carbon content: "))
-# tensile = float(input("Enter tensile strength: "))
+''' process - 1 '''
+hardness = float(input("Enter hardness: "))
+carbon = float(input("Enter carbon content: "))
+tensile = float(input("Enter tensile strength: "))
+c1 = hardness > 50
+c2 = carbon < 0.7
+c3 = tensile > 5600
+if c1 and c2 and c3:
+    grade = 10
+elif c1 and c2:
+    grade = 9
+elif c2 and c3:
+    grade = 8
+elif c1 and c3:
+    grade = 7
+elif c1 or c2 or c3:
+    grade = 6
+else:
+    grade = 5
 
-# c1 = hardness > 50
-# c2 = carbon < 0.7
-# c3 = tensile > 5600
+print("Grade of steel:", grade)
 
-# if c1 and c2 and c3:
-#     grade = 10
-# elif c1 and c2:
-#     grade = 9
-# elif c2 and c3:
-#     grade = 8
-# elif c1 and c3:
-#     grade = 7
-# elif c1 or c2 or c3:
-#     grade = 6
-# else:
-#     grade = 5
 
-# print("Grade of steel:", grade)
+''' process - 2 '''
+def steel_grade(hardness, carbon, tensile):
+    c1 = hardness > 50
+    c2 = carbon < 0.7
+    c3 = tensile > 5600
+    if c1 and c2 and c3:
+        grade = 10
+    elif c1 and c2:
+        grade = 9
+    elif c2 and c3:
+        grade = 8
+    elif c1 and c3:
+        grade = 7
+    elif c1 or c2 or c3:
+        grade = 6
+    else:
+        grade = 5
+    return f"Grade of steel: {grade}"
+hardness = float(input("Enter hardness: "))
+carbon = float(input("Enter carbon content: "))
+tensile = float(input("Enter tensile strength: "))
+print(steel_grade(hardness, carbon, tensile))
