@@ -2,7 +2,7 @@ def term_marks(self):
         if term1 < 0:
             self.__Term1 = 0
         else:
-            self.__Term1 = term1
+            self.__Term1 = term1              # private attribute
         if term1 < 0:
             self.__Term1 = 0
         else:
